@@ -17,7 +17,7 @@ softdepend:
   - WorldGuard
   - WorldEdit
   - Towny
-api-version: 1.21.4
+api-version: 1.21.1
 commands:
   re:
     description: Access to the claim transaction information.
