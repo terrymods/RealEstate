@@ -13,6 +13,19 @@ RealEstate:
     AdminClaimPrefix: администраторское
     ClaimPrefix: обычное
     TheServer: Сервер
+    Time:
+      Week:
+        Singular: неделя
+        Plural: нед.
+      Day:
+        Singular: день
+        Plural: дн.
+      Hour:
+        Singular: час
+        Plural: ч.
+      Minute:
+        Singular: мин
+        Plural: мин.
   NoTransactionFound: $cНе найдено ни одной транзакции!
   NoTransactionFoundHere: $cНа вашем местоположении не найдено ни одной транзакции!
   PageMustBePositive: $cСтраница должна быть положительным числом.
@@ -52,3 +65,5 @@ RealEstate:
       Ended: $bАукцион завершен
       # следующая строка: победитель
       Won: $bАукцион выиграл
+    Rent:
+      TimeRemainingLabel: $bОсталось времени :

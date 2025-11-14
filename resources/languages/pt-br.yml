@@ -13,6 +13,19 @@ RealEstate:
     AdminClaimPrefix: um administrador
     ClaimPrefix: um
     TheServer: Servidor
+    Time:
+      Week:
+        Singular: semana
+        Plural: semanas
+      Day:
+        Singular: dia
+        Plural: dias
+      Hour:
+        Singular: hora
+        Plural: horas
+      Minute:
+        Singular: minuto
+        Plural: minutos
   NoTransactionFound: $cNenhuma transação encontrada!
   NoTransactionFoundHere: $cNenhuma transação encontrada em sua localização!
   PageMustBePositive: $cA página deve ser uma opção positiva
@@ -118,6 +131,8 @@ RealEstate:
          isto!
       NotAdmin: $cApenas um administrador tem permissão para destruir este sinal!
       NoTransaction: $cEsta reivindicação não é mais para alugar, vender ou arrendar, desculpe...
+      Rent:
+        TimeRemainingLabel: $bTempo restante :
     Claim:
       DoesNotExist: $cEsta afirmação não existe!
       # 0: claim type

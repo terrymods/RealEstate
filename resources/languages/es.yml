@@ -13,6 +13,19 @@ RealEstate:
     AdminClaimPrefix: un administrador
     ClaimPrefix: un
     TheServer: El servidor
+    Time:
+      Week:
+        Singular: semana
+        Plural: semanas
+      Day:
+        Singular: día
+        Plural: días
+      Hour:
+        Singular: hora
+        Plural: horas
+      Minute:
+        Singular: minuto
+        Plural: minutos
   NoTransactionFound: $c¡No se encontró ninguna transacción!
   NoTransactionFoundHere: $c¡No se encontró ninguna transacción en tu ubicación!
   PageMustBePositive: $cLa página debe ser una opción positiva.
@@ -52,3 +65,5 @@ RealEstate:
       Ended: $bSubasta finalizada
       # siguiente línea: ganador
       Won: $bSubasta ganada por
+    Rent:
+      TimeRemainingLabel: $bTiempo restante :
