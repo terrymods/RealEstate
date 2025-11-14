@@ -80,6 +80,54 @@ public class Messages extends AnnotationConfig {
     public String keywordTheServer = "The server";
 
     /**
+     * Keyword representing the singular form of "week" when formatting durations.
+     */
+    @ConfigField(name = "RealEstate.Keywords.Time.Week.Singular")
+    public String keywordTimeWeekSingular = "week";
+
+    /**
+     * Keyword representing the plural form of "week" when formatting durations.
+     */
+    @ConfigField(name = "RealEstate.Keywords.Time.Week.Plural")
+    public String keywordTimeWeekPlural = "weeks";
+
+    /**
+     * Keyword representing the singular form of "day" when formatting durations.
+     */
+    @ConfigField(name = "RealEstate.Keywords.Time.Day.Singular")
+    public String keywordTimeDaySingular = "day";
+
+    /**
+     * Keyword representing the plural form of "day" when formatting durations.
+     */
+    @ConfigField(name = "RealEstate.Keywords.Time.Day.Plural")
+    public String keywordTimeDayPlural = "days";
+
+    /**
+     * Keyword representing the singular form of "hour" when formatting durations.
+     */
+    @ConfigField(name = "RealEstate.Keywords.Time.Hour.Singular")
+    public String keywordTimeHourSingular = "hour";
+
+    /**
+     * Keyword representing the plural form of "hour" when formatting durations.
+     */
+    @ConfigField(name = "RealEstate.Keywords.Time.Hour.Plural")
+    public String keywordTimeHourPlural = "hours";
+
+    /**
+     * Keyword representing the singular form of "minute" when formatting durations.
+     */
+    @ConfigField(name = "RealEstate.Keywords.Time.Minute.Singular")
+    public String keywordTimeMinuteSingular = "min";
+
+    /**
+     * Keyword representing the plural form of "minute" when formatting durations.
+     */
+    @ConfigField(name = "RealEstate.Keywords.Time.Minute.Plural")
+    public String keywordTimeMinutePlural = "mins";
+
+    /**
      * Message displayed when no transaction is found.
      */
     @ConfigField(name = "RealEstate.NoTransactionFound")
@@ -1317,6 +1365,12 @@ public class Messages extends AnnotationConfig {
      */
     @ConfigField(name = "RealEstate.Sign.Auction.Won", comment = "next line: winner")
     public String msgSignAuctionWon = "$bAuction won by";
+
+    /**
+     * Sign message displayed for the remaining time label on rented claims.
+     */
+    @ConfigField(name = "RealEstate.Sign.Rent.TimeRemainingLabel")
+    public String msgSignRentTimeRemainingLabel = "$bTime remaining :";
 
     /**
      * Loads the language configuration file.
