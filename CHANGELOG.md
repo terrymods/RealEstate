@@ -62,7 +62,7 @@
 ### Dependency and Compatibility:
 * Ensured compatibility with the latest versions of Vault, EssentialsX, GriefPrevention, and GriefDefender.
 ** Added paper-plugin.yml to ensure Paper servers load the plugins in the correct order.
-** Updated the plugin's plugin.yml and paper-plugin.yml for API version 1.21.4.
+** Updated the plugin's plugin.yml and paper-plugin.yml for API version 1.21.1.
 
 ### General Bug Fixes:
 * Resolved a bug where the sign for [sell] transactions remained blank.
