@@ -156,7 +156,7 @@ public class ClaimRent extends BoughtTransaction {
                 RealEstateSign s = new RealEstateSign((Sign) sign.getBlock().getState());
                 s.setLine(0, ChatColor.GOLD + RealEstate.instance.config.cfgReplaceOngoingRent);
                 s.setLine(1, Utils.getSignString(Bukkit.getOfflinePlayer(buyer).getName()));
-                s.setLine(2, "Time remaining : ");
+                s.setLine(2, Messages.getMessage(RealEstate.instance.messages.msgSignRentTimeRemainingLabel, false));
                 int daysLeft = duration - days - 1; // Remove current day
                 Duration timeRemaining = Duration.ofHours(24).minus(hours);
                 s.setLine(3, Utils.getTime(daysLeft, timeRemaining, false));

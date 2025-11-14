@@ -110,25 +110,64 @@ public class Utils
      */
     public static String getTime(int days, Duration hours, boolean details)
     {
-        String time = "";
-        if(days >= 7)
+        StringBuilder time = new StringBuilder();
+        Messages messages = RealEstate.instance != null ? RealEstate.instance.messages : null;
+
+        String weekSingular = messages != null ? messages.keywordTimeWeekSingular : "week";
+        String weekPlural = messages != null ? messages.keywordTimeWeekPlural : "weeks";
+        String daySingular = messages != null ? messages.keywordTimeDaySingular : "day";
+        String dayPlural = messages != null ? messages.keywordTimeDayPlural : "days";
+        String hourSingular = messages != null ? messages.keywordTimeHourSingular : "hour";
+        String hourPlural = messages != null ? messages.keywordTimeHourPlural : "hours";
+        String minuteSingular = messages != null ? messages.keywordTimeMinuteSingular : "min";
+        String minutePlural = messages != null ? messages.keywordTimeMinutePlural : "mins";
+
+        int weeks = days / 7;
+        appendTimeComponent(time, weeks, weekSingular, weekPlural);
+
+        int remainingDays = days % 7;
+        appendTimeComponent(time, remainingDays, daySingular, dayPlural);
+
+        if((details || days < 7) && hours != null)
         {
-            time += (days / 7) + " week" + (days >= 14 ? "s" : "");
+            long hoursCount = hours.toHours();
+            if(hoursCount > 0)
+            {
+                appendTimeComponent(time, hoursCount, hourSingular, hourPlural);
+            }
         }
-        if(days % 7 > 0)
+
+        if((details || days == 0) && hours != null)
         {
-            time += (time.isEmpty() ? "" : " ") + (days % 7) + " day" + (days % 7 > 1 ? "s" : "");
+            long minutes = hours.toMinutes() % 60;
+            if(time.length() == 0 || minutes > 0)
+            {
+                if(time.length() > 0)
+                {
+                    time.append(' ');
+                }
+                time.append(minutes)
+                    .append(' ')
+                    .append(minutes == 1 ? minuteSingular : minutePlural);
+            }
         }
-        if((details || days < 7) && hours != null && hours.toHours() > 0)
+
+        return time.toString();
+    }
+
+    private static void appendTimeComponent(StringBuilder builder, long amount, String singular, String plural)
+    {
+        if(amount <= 0)
         {
-            time += (time.isEmpty() ? "" : " ") + hours.toHours() + " hour" + (hours.toHours() > 1 ? "s" : "");
+            return;
         }
-        if((details || days == 0) && hours != null && (time.isEmpty() || hours.toMinutes() % 60 > 0))
+        if(builder.length() > 0)
         {
-            time += (time.isEmpty() ? "" : " ") + (hours.toMinutes() % 60) + " min" + (hours.toMinutes() % 60 > 1 ? "s" : "");
+            builder.append(' ');
         }
-        
-        return time;
+        builder.append(amount)
+               .append(' ')
+               .append(amount == 1 ? singular : plural);
     }
     
     /**

@@ -13,6 +13,19 @@ RealEstate:
     AdminClaimPrefix: an admin
     ClaimPrefix: a
     TheServer: The server
+    Time:
+      Week:
+        Singular: week
+        Plural: weeks
+      Day:
+        Singular: day
+        Plural: days
+      Hour:
+        Singular: hour
+        Plural: hours
+      Minute:
+        Singular: min
+        Plural: mins
   NoTransactionFound: $cNo transaction found!
   NoTransactionFoundHere: $cNo transaction found at your location!
   PageMustBePositive: $cPage must be a positive option
@@ -419,3 +432,5 @@ RealEstate:
       Ended: $bAuction ended
       # next line: winner
       Won: $bAuction won by
+    Rent:
+      TimeRemainingLabel: $bTime remaining :
